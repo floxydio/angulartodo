@@ -1,0 +1,15 @@
+<div class ="main">
+  <h3> FLOXY</h3>
+  <div class="title">
+    <input type="text" [(ngModel)]="newTask"/>
+    <input (click) ="addTodo()" type="submit" value="Add Todo" />
+  </div>  
+  <div class="task" *ngFor="let e of items;; let index = index;">
+      <ul class="list_todo">
+        <li>{{e}}</li>
+        <button class="m-4" (click)="deleteTodo(index)">X</button>
+      </ul>
+  </div>
+
+
+</div>

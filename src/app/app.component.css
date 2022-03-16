@@ -1,0 +1,13 @@
+.m-4 {
+    margin-left: 40px;
+}
+
+.title {
+    text-align:  center;
+}
+
+
+.list_todo {
+    display: flex;
+    flex-direction: row;
+}
