@@ -1,0 +1,16 @@
+.header_menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav_menu{
+    margin-right: 10px;
+    margin-left:10px;
+    font-size: 22px ;
+    cursor: pointer;
+}
+
+.nav_menu:hover {
+    color:blue;
+}

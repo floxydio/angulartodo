@@ -1,15 +1,11 @@
 <div class ="main">
-  <h3> FLOXY</h3>
-  <div class="title">
-    <input type="text" [(ngModel)]="newTask"/>
-    <input (click) ="addTodo()" type="submit" value="Add Todo" />
-  </div>  
-  <div class="task" *ngFor="let e of items;; let index = index;">
-      <ul class="list_todo">
-        <li>{{e}}</li>
-        <button class="m-4" (click)="deleteTodo(index)">X</button>
-      </ul>
+  <!-- <app-header-menu></app-header-menu>
+  <app-body-section [title]="'Hai From Body'" [nama]="'Dio Okta Rovelino'"></app-body-section>
+  <input type="text" [(ngModel)] = "newTask" placeholder="Input Your Username"/>
+  <input type="button" (click)="showAlert()" value="Click" />
+  <input type="button" (click)="showSave()" value="Click meee" /> -->
+
+  <div *ngFor="let reqres of Reqres.data">
+    <p>{{reqres.email}}</p>
   </div>
-
-
 </div>
