@@ -1,11 +1,11 @@
 <div class ="main">
-  <!-- <app-header-menu></app-header-menu>
-  <app-body-section [title]="'Hai From Body'" [nama]="'Dio Okta Rovelino'"></app-body-section>
-  <input type="text" [(ngModel)] = "newTask" placeholder="Input Your Username"/>
-  <input type="button" (click)="showAlert()" value="Click" />
-  <input type="button" (click)="showSave()" value="Click meee" /> -->
-
-  <div *ngFor="let reqres of Reqres.data">
-    <p>{{reqres.email}}</p>
-  </div>
+<div class="main-nav">
+  <h2>My Website</h2>
+  <nav>
+    <a class="nav" routerLink="/">Home</a>
+    <a class="nav" routerLink="/about">About</a>
+  </nav>
+</div>
+  <router-outlet></router-outlet>
+ 
 </div>
