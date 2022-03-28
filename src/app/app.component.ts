@@ -1,4 +1,4 @@
-import { Component, NgModule, OnInit } from '@angular/core';
+import { Component, Input, NgModule, OnInit } from '@angular/core';
 import { ReqresService } from './reqres.service';
 @Component({
   selector: 'app-root',
@@ -7,6 +7,8 @@ import { ReqresService } from './reqres.service';
 })
 export class AppComponent implements OnInit {
   Reqres: any = [];
+  @Input()email  = "";
+  @Input()password ="";
   constructor(public restApi: ReqresService) {}
   ngOnInit(): void {
     this.loadReqres();
@@ -15,6 +17,13 @@ export class AppComponent implements OnInit {
   loadReqres() {
     return this.restApi.getUser().subscribe((data: {}) => {
       this.Reqres = data;
+    })
+  } 
+  submitRegister() {
+    console.log(`Data --> ${this.email} --> ${this.password}`)
+    return this.restApi.postLogin(this.email,this.password).subscribe((data: {}) => {
+      this.Reqres = data;
+      console.warn("DATAAA -> ", data);
     })
   }
   // public items: string[] = [];

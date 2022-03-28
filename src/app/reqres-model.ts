@@ -5,3 +5,8 @@ export interface ReqresModel {
     last_name: string;
     avatar: string;
 }
+
+export interface PostModel {
+    email: string;
+    passwor: string;
+}
