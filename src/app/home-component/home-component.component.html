@@ -1,3 +1,8 @@
-<div *ngFor="let reqres of Reqres.data">
+<!-- <div *ngFor="let reqres of Reqres.data">
     <p>{{reqres.email}}</p>
+  </div> -->
+
+  <div *ngFor="let anime of AnimeModel.data">
+    <img src="{{anime.entry.images.jpg.image_url}}" />
+    <p>{{anime.entry.url}}</p>
   </div>

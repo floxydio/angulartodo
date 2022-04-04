@@ -7,11 +7,13 @@ import { ReqresService } from './reqres.service';
 })
 export class AppComponent implements OnInit {
   Reqres: any = [];
+  AnimeModel: any = [];
   @Input()email  = "";
   @Input()password ="";
   constructor(public restApi: ReqresService) {}
   ngOnInit(): void {
     this.loadReqres();
+    this.loadAnime();
     
   }
   loadReqres() {
@@ -19,6 +21,12 @@ export class AppComponent implements OnInit {
       this.Reqres = data;
     })
   } 
+
+  loadAnime() {
+    return this.restApi.getAnime().subscribe((data: {}) => {
+      this.AnimeModel = data;
+    })
+  }
   submitRegister() {
     console.log(`Data --> ${this.email} --> ${this.password}`)
     return this.restApi.postLogin(this.email,this.password).subscribe((data: {}) => {
